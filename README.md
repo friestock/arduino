@@ -1,3 +1,3 @@
 # arduino
 
-projet arduino v1
+projet Arduino v1
