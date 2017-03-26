@@ -1,0 +1,68 @@
+So here's the important bit. To be honest i'm not sure that what I'm about to
+say is technically correct but, well it works so there you go. The IR code
+signal is 38kHz but the .wav file we will create cannot go that high.
+So what we do is use pulses of 19kHz, and because we have two LEDs wired
+opposing each other, one LED will 'light' up during the positive part of the
+wave and the other will light up during the negative part of the wave, so that
+for each wavelength we actually have two pulses - so a 19kHz wave gives us 38kHz
+pulses. Follow me? To make sure this works, only one channel (I've made it the
+left channel) can transmit the signal because if both channels do then they
+cancel each other out. Or you could invert the signal on the right channel
+(possibly leading to a stronger IR pulse - need to experiment with that).
+The signals are created simply using the "Generate, Tone" function in Audacity.
+I specified a square signal and 19000 Hz, for 13 milliseconds for the first
+long pulse and then 1 millisecond for the subsequent pulses.
+Here's a screenshot of the .wav file I created, I used Audacity which is free.
+
+LINK
+
+Once it is saved as a .wav, use windows media player or something to check it
+works. In case you hadn't guessed, the lead you made just plugs into the
+headphone jack of your computer/MP3 player/whatever. It's funny though -
+this didn't work with VLC. But windows media player did work. Meh. It also
+worked when I converted the file into an MP3, but possibly less reliably?
+Not sure. I would stick with wavs unless your device can't play them.
+To make this into a useful timer, you need to create a track with the signal at
+the beginning, followed by X amount of silence, and then simply play the track
+on repeat. However I have found it hard to gauge how much time to leave -
+for example when you set the shutter speed to 30 seconds the time between shots
+is actually a bit longer than this. For this reason I prefer to use bulb mode,
+so the .wav is laid out like this:
+
+SIGNAL - 30s silence - SIGNAL - 2 seconds silence
+with this on repeat, the camera will continuously take 30s shots until the
+memory card is full/batteries run out. Whatever, experiment, see what you like.
+Watch out for DFS though, but then you could even account for that by putting in
+the appropriate amount of silence for DFS.
+Anyway the point is this is a really really simple way to make your k-x into a
+time-lapse or astrophotography beast! You could even set up a playlist to give
+you, say, 100 exposures at 30 seconds, 10 exposures at 5 seconds, or whatever.
+I'll be making some sort of mount to attach the lead to the camera close to the
+IR port, possibly even just an elastic band or something.
+Finally here's a zip of the audacity project and the raw .wav file (Now with
+improved range by putting the inverted signal on the opposite channel)
+
+
+Hope you enjoy.
+
+EDIT:
+
+This is why the mp3 does not work quite so well:
+
+I didn't imagine the mp3 would be quite so screwed up! I would definitely
+recommend some sort of lossless compression, for example ogg vorbis which looks
+a LOT better:
+
+Also, as lavascript points out, this is useful for any pentax camera not just
+the k-x. However it is particularly useful for the k-x as it has no timelapse
+functionality.
+
+Read more at: https://www.pentaxforums.com/forums/6-pentax-dslr-discussion/131633-absurdly-simple-diy-k-x-remote-timer-using-mp3-player.html#ixzz4b9AG9un0
+
+Photo
+Pentax Digital Camera
+0000 006E 0008 0000 01EE 0072 0026 0026 0026 0026 0026 0026 0026 0026 0026 0026 0026 0026 0026 0026
+
+
+autre site :
+https://www.dsebastien.net/2015/01/17/time-lapse-using-arduino-as-dslr-remote-trigger-v1/
