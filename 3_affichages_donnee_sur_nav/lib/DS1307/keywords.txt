@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For DS1307
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+ds1307	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+getRegister     KEYWORD2
+resume          KEYWORD2
+standby         KEYWORD2
+getDate         KEYWORD2
+setSeconds      KEYWORD2
+setMinutes      KEYWORD2
+setHours        KEYWORD2
+setDow          KEYWORD2
+setData         KEYWORD2
+setMonth        KEYWORD2
+setYear         KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
